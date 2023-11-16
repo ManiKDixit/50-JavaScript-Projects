@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&family=Roboto+Mono&display=swap');
+
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: rgb(207, 203, 203);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 235, 221);
+    font-family:  'Nunito Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+   display: flex;
+   justify-content: space-between;
+   max-width: 100%;
+   width: 350px;
+   margin-bottom: 30px;
+   position: relative;
+
+} 
+
+
+.progress-container::before {
+    content: "";
+    background-color: var(--line-border-empty);
+    position: absolute;
+    height: 2.7px;
+    width: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    z-index: -1;
+}
+
+.progress {
+    background-color: var(--line-border-fill);
+    position: absolute;
+    height: 2.7px;
+    width: 0%;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circle {
+    background-color: azure;
+    border-radius: 50%;
+    width:8%;
+    height:10%;
+    border: 3px var(--line-border-empty) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s ease;
+}
+
+.circle.active {
+    border-color: var(--line-border-fill);
+}
+
+.btn {
+    background-color: #80b9df;
+    margin: 4%;
+
+    height: 41.3px;
+    width: 27%;
+    font-size: 17px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 530;
+    cursor: pointer;
+}
+
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn :focus {
+    outline: none;
+}
+
+.btn:disabled {
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+    font-weight: 400;
+}
+
