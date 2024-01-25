@@ -10,20 +10,23 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
+   overflow: hidden; 
     margin: 0;
 }
 
 .container {
     display: flex;
-    width: 90vw;
+    width: 90vw; 
+   
 }
+
 
 .panel {
     background-size : cover ;
     background-position: center;
     background-repeat: no-repeat;
     color: azure;
+  /*  height: 80vh; */
     height: 80vh;
     border-radius: 50px;
     cursor: pointer;
@@ -49,6 +52,10 @@ body {
 .panel.active h3 {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel:nth-of-type(7) {
+    color: #000;
 }
 
 /*@media (max-width: 480px) {
